@@ -1,6 +1,6 @@
 import { Paper } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Countdown from 'react-countdown';
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -74,12 +74,15 @@ export const MintCountdown: React.FC<MintCountdownProps> = ({
     seconds,
     completed,
   }: MintCountdownRender) => {
-    hours += days * 24;
     if (completed) {
       return status ? <span className={classes.done}>{status}</span> : null;
     } else {
       return (
         <div className={classes.root} style={style}>
+          <Paper elevation={0}>
+            <span className={classes.item}>{days}</span>
+            <span>days</span>
+          </Paper>
           <Paper elevation={0}>
             <span className={classes.item}>
               {hours < 10 ? `0${hours}` : hours}

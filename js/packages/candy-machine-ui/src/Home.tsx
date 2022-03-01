@@ -280,7 +280,7 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <Container style={{ marginTop: 100 }}>
+    <Container style={{ marginTop: 150 }}>
       <Container maxWidth="xs" style={{ position: 'relative' }}>
         <Paper
           style={{
@@ -301,9 +301,11 @@ const Home = (props: HomeProps) => {
                   justifyContent="center"
                   wrap="nowrap"
                 >
-                  <Typography variant="body2" color="textSecondary">
-                    Remaining
-                  </Typography>
+                  <img
+                    alt="staratlasitalia logo"
+                    src="/logo.png"
+                    style={{ marginBottom: 20 }}
+                  />
                   <Grid
                     container
                     direction="row"
