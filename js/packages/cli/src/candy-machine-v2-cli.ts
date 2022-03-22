@@ -263,8 +263,6 @@ programCommand('upload')
       walletKeyPair,
     );
 
-    log.debug(setCollectionMint);
-
     const startMs = Date.now();
     log.info('started at: ' + startMs.toString());
     try {
@@ -296,7 +294,8 @@ programCommand('upload')
         arweaveJwk,
         rateLimit,
         collectionMintPubkey,
-        setCollectionMint: false,
+        setCollectionMint,
+        rpcUrl,
       });
     } catch (err) {
       log.warn('upload was not successful, please re-run.', err);
